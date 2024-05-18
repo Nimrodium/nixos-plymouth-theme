@@ -1,69 +1,28 @@
-# S4rchiso Boot Theme
+# NixOS Boot Theme
 
-Animated plymouth theme with vustom Arch logo and elegant look.
+Animated plymouth theme with NixOs logo and elegant look.
 
-It is a simple plymouth theme with shell scripts to install, test and eventualy uninstall the theme.
-
-### Install on Arch Linux
- * with `yay`: `yay -S polymouth`
- * without yay (require base-dev package):
-    - `git clone https://aur.archlinux.org/plymouth.git`
-    - `cd plymouth`
-    - `makepkg -si`
-
-# Installation
-* go to the downloaded `s4rchiso-plymouth-theme` folder from terminal, it can be done with the following command
+## Install
+Configurate plymouth
+```nix
+{ pkgs, ... }: let
+    mac-style-src = pkgs.fetchFromGitHub {
+      owner = "SergioRibera";
+      repo = "s4rchiso-plymouth-theme";
+      rev = "bc585b7f42af415fe40bece8192d9828039e6e20";
+      sha256 = "sha256-yOvZ4F5ERPfnSlI/Scf9UwzvoRwGMqZlrHkBIB3Dm/w=";
+    };
+    mac-style-load = pkgs.callPackage mac-style-src {};
+in {
+  boot = {
+    plymouth = {
+      enable = true;
+      theme = "mac-style";
+      themePackages = [ mac-style-load ];
+    };
+  };
+}
 ```
-cd /PATH/TO/s4rchiso-plymouth-theme
-```
-or by opening the folder with your file explorer and going to RIGHT-CLICK > Open in Terminal
-* make the `install` file executable, it can be done with the following command
-```
-sudo chmod +x install
-```
-* execute the `install` file, it can be done with the following command
-```
-sudo ./install
-```
-
-# Test
-
-* go to the downloaded `s4rchiso-plymouth-theme` folder from terminal, it can be done with the following command
-```
-cd /PATH/TO/s4rchiso-plymouth-theme
-```
-or by opening the folder with your file explorer and going to RIGHT-CLICK > Open in Terminal
-* make the `show-splash.sh` file executable, it can be done with the following command
-```
-sudo chmod +x show-splash.sh
-```
-* execute the `show-splash.sh` file, it can be done with the following command
-```
-sudo ./show-splash.sh
-```
-
-
-
-
-# Removal
-
-* go to the downloaded `s4rchiso-plymouth-theme` folder from terminal, it can be done with the following command
-```
-cd /PATH/TO/s4rchiso-plymouth-theme
-```
-or by opening the folder with your file explorer and going to RIGHT-CLICK > Open in Terminal
-* make the `uninstall` file executable, it can be done with the following command
-```
-sudo chmod +x uninstall
-```
-* execute the `uninstall` file, it can be done with the following command
-```
-sudo ./uninstall
-```
-* then when asked chose the new plymouth theme by typing the number of your choice and pressing `Enter`
-
-
-
 
 ## License
 
