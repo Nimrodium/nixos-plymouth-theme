@@ -1,4 +1,5 @@
 # NixOS Boot Theme
+![image](https://github.com/SergioRibera/s4rchiso-plymouth-theme/assets/56278796/0c6fc706-9131-4a94-bac9-ce4c8a7cd7a1)
 
 Animated plymouth theme with NixOs logo and elegant look.
 
