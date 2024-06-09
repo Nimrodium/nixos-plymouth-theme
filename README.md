@@ -25,9 +25,5 @@ in {
 }
 ```
 
-## License
-
-This project is licensed under the GPL v.2 License - see the LICENSE.md file for details
-
 ## Acknowledgments
 * [Based on MacOs style](https://www.gnome-look.org/p/2112595)
