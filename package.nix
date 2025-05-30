@@ -1,7 +1,5 @@
-{
-  pkgs ? import <nixpkgs> {},
-}:
-pkgs.stdenv.mkDerivation {
+{stdenvNoCC}:
+stdenvNoCC.mkDerivation {
   pname = "mac-style";
   version = "0.1.0";
   src = ./src;

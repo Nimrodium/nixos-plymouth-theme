@@ -1,29 +1,24 @@
-# NixOS Boot Theme
-![image](https://github.com/SergioRibera/s4rchiso-plymouth-theme/assets/56278796/0c6fc706-9131-4a94-bac9-ce4c8a7cd7a1)
+Fork of [SergioRibera's mac-style Plymouth theme](https://github.com/SergioRibera/s4rchiso-plymouth-theme), with a flake and some minor customization.
 
-Animated plymouth theme with NixOs logo and elegant look.
+### Flake Install
 
-## Install
-Configurate plymouth
+Include in your `flake.nix` inputs:
+
 ```nix
-{ pkgs, ... }: let
-    mac-style-src = pkgs.fetchFromGitHub {
-      owner = "SergioRibera";
-      repo = "s4rchiso-plymouth-theme";
-      rev = "bc585b7f42af415fe40bece8192d9828039e6e20";
-      sha256 = "sha256-yOvZ4F5ERPfnSlI/Scf9UwzvoRwGMqZlrHkBIB3Dm/w=";
-    };
-    mac-style-load = pkgs.callPackage mac-style-src {};
-in {
-  boot = {
-    plymouth = {
-      enable = true;
-      theme = "mac-style";
-      themePackages = [ mac-style-load ];
-    };
-  };
-}
+inputs.mac-style-plymouth = {
+  url = "github:zacharyweiss/nixos-mac-style-plymouth";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
 ```
 
-## Acknowledgments
-* [Based on MacOs style](https://www.gnome-look.org/p/2112595)
+Apply the overlay (`mac-style-plymouth.overlays.default`) to nixpkgs, and enable plymouth as follows.
+
+```nix
+boot = {
+  plymouth = {
+    enable = true;
+    theme = "mac-style";
+    themePackages = [ pkgs.mac-style-plymouth ];
+  };
+};
+```
