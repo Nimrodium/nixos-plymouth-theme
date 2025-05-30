@@ -16,7 +16,7 @@
         pkgs = import nixpkgs {
           inherit system;
         };
-      in rec {
+      in {
         packages = {
           default = pkgs.callPackage ./package.nix {};
           mac-style-plymouth = pkgs.callPackage ./package.nix {};
