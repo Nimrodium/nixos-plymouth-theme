@@ -1,6 +1,6 @@
 [Plymouth Theme]
 Name=mac-style
-Description=Boot animation with your own Logo, inspired by the Boot animation of macOS.
+Description=Boot animation with the NixOS logo, inspired by the boot animation of macOS.
 ModuleName=two-step
 
 [two-step]
@@ -25,6 +25,7 @@ ProgressBarWidth=350
 ProgressBarHeight=5
 ProgressBarBackgroundColor=0x333333
 ProgressBarForegroundColor=0xffffff
+ProgressFunction=wwoods
 DialogClearsFirmwareBackground=true
 MessageBelowAnimation=true
 
@@ -45,7 +46,7 @@ UseFirmwareBackground=false
 SuppressMessages=true
 ProgressBarShowPercentComplete=true
 UseProgressBar=true
-Title=Install Updates...
+Title=Installing Updates...
 SubTitle=Please do not turn off your computer.
 
 [system-upgrade]
@@ -53,7 +54,7 @@ UseFirmwareBackground=false
 SuppressMessages=true
 ProgressBarShowPercentComplete=true
 UseProgressBar=true
-Title=Install Upgrades...
+Title=Installing Upgrades...
 SubTitle=Please do not turn off your computer.
 
 [firmware-upgrade]
@@ -61,5 +62,5 @@ UseFirmwareBackground=false
 SuppressMessages=true
 ProgressBarShowPercentComplete=true
 UseProgressBar=true
-Title=Install Firmware-Updates...
+Title=Installing Firmware Updates...
 SubTitle=Please do not turn off your computer.
