@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ "$(whoami)" != "root" ]; then
+	echo "run as root"
+	exit 1
+fi
+
+plymouthd
+plymouth --show-splash --config /home/kyle/repo/nixos-plymouth-theme/src/mac-style/mac-style.plymouth
+sleep $1
+plymouth --quit

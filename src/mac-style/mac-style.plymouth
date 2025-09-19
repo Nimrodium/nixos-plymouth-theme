@@ -1,30 +1,45 @@
+
 [Plymouth Theme]
 Name=mac-style
 Description=Boot animation with the NixOS logo, inspired by the boot animation of macOS.
 ModuleName=two-step
 
 [two-step]
-ImageDir=@IMAGES@
+# ImageDir=@IMAGES@
+
+ImageDir=/home/kyle/repo/nixos-plymouth-theme/src/mac-style/images/
+
 DialogHorizontalAlignment=.5
-DialogVerticalAlignment=.5
-TitleHorizontalAlignment=.5
-TitleVerticalAlignment=.75
-HorizontalAlignment=.5
-VerticalAlignment=.59
+DialogVerticalAlignment=.7
+
+TitleHorizontalAlignment=.0
+TitleVerticalAlignment=.0
+
+HorizontalAlignment=0.5
+VerticalAlignment=.65
+
 WatermarkHorizontalAlignment=.5
 WatermarkVerticalAlignment=.98
-Transition=none
-TransitionDuration=0.0
+
+# Transition=
+TransitionDuration=5
+
 BackgroundStartColor=0x000000
-BackgroundEndColor=0x000000
+BackgroundEndColor=0x222233
+
 ProgressBarHorizontalAlignment=.5
 ProgressBarVerticalAlignment=.59
+
 ProgressBarWidth=350
 ProgressBarHeight=5
+
 ProgressBarBackgroundColor=0x333333
 ProgressBarForegroundColor=0xffffff
+
 ProgressFunction=wwoods
+
 DialogClearsFirmwareBackground=true
+
 MessageBelowAnimation=true
 
 [boot-up]
@@ -34,6 +49,7 @@ UseFirmwareBackground=false
 [shutdown]
 UseEndAnimation=true
 UseFirmwareBackground=false
+Title=Shutting Down...
 
 [reboot]
 UseEndAnimation=true
