@@ -5,9 +5,9 @@ Description=Boot animation with the NixOS logo, inspired by the boot animation o
 ModuleName=two-step
 
 [two-step]
-# ImageDir=@IMAGES@
+ImageDir=@IMAGES@
 
-ImageDir=/home/kyle/repo/nixos-plymouth-theme/src/mac-style/images/
+# ImageDir=/home/kyle/repo/nixos-plymouth-theme/src/mac-style/images/
 
 DialogHorizontalAlignment=.5
 DialogVerticalAlignment=.7
