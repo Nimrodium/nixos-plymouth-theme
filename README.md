@@ -1,5 +1,6 @@
 # NixOS Boot Theme
-![image](https://github.com/Nimrodium/nixos-plymouth-theme/nixos-plymouth.png)
+
+<img width="1227" height="768" alt="nixos-plymouth" src="https://github.com/user-attachments/assets/a7f4c3c7-fae3-4e6a-b533-bf600910f701" />
 
 Animated plymouth theme with NixOs logo and elegant look.
 
