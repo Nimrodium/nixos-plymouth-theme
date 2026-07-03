@@ -9,18 +9,18 @@ Animated plymouth theme with NixOS logo and elegant look.
 Include in your `flake.nix` inputs:
 
 ```nix
-inputs.mac-style-plymouth = {
+inputs.nixos-splash-plymouth = {
   url = "github:Nimrodium/nixos-plymouth-theme";
   inputs.nixpkgs.follows = "nixpkgs";
 };
 ```
 
-Apply the overlay (`mac-style-plymouth.overlays.default`) to nixpkgs, and enable plymouth as follows.
+Apply the overlay (`nixos-splash-plymouth.overlays.default`) to nixpkgs, and enable plymouth as follows.
 
 ```nix
 # in example
 pkgs = import nixpkgs {
-  overlays = [ inputs.mac-style-plymouth.overlays.default ];
+  overlays = [ inputs.nixos-splash-plymouth.overlays.default ];
 };
 ```
 
@@ -30,10 +30,11 @@ Use Theme 🥳
 boot = {
   plymouth = {
     enable = true;
-    theme = "mac-style";
-    themePackages = [ pkgs.mac-style-plymouth ];
+    theme = "nixos-splash";
+    themePackages = [ pkgs.nixos-splash-plymouth ];
   };
 };
 ```
 ## Acknowledgments
 * [Based on MacOs style](https://www.gnome-look.org/p/2112595)
+* [Forked from this repository](https://github.com/SergioRibera/s4rchiso-plymouth-theme)

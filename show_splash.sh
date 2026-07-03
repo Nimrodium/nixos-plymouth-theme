@@ -5,6 +5,6 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 plymouthd
-plymouth --show-splash --config /home/kyle/repo/nixos-plymouth-theme/src/mac-style/mac-style.plymouth
+plymouth --show-splash --config /home/kyle/repo/nixos-plymouth-theme/src/nixos-splash/nixos-splash.plymouth
 sleep $1
 plymouth --quit

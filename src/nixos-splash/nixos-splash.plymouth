@@ -1,13 +1,13 @@
 
 [Plymouth Theme]
-Name=mac-style
+Name=nixos-splash
 Description=Boot animation with the NixOS logo, inspired by the boot animation of macOS.
 ModuleName=two-step
 
 [two-step]
 ImageDir=@IMAGES@
 
-# ImageDir=/home/kyle/repo/nixos-plymouth-theme/src/mac-style/images/
+# ImageDir=/home/kyle/repo/nixos-plymouth-theme/src/nixos-splash/images/
 
 DialogHorizontalAlignment=.5
 DialogVerticalAlignment=.7
